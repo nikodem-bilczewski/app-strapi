@@ -6,11 +6,7 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": [
-            "self",
-            "https:",
-            `${env("AWS_BUCKET")}.s3.${env("AWS_REGION")}.amazonaws.com`,
-          ],
+          "connect-src": ["self", "https:"],
           "img-src": [
             "self",
             "data:",

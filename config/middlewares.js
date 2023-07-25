@@ -7,8 +7,18 @@ module.exports = [
       contentSecurityPolicy: {
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "*.amazonaws.com"],
-          "media-src": ["'self'", "data:", "blob:", "*.amazonaws.com"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "strapi-app-aws-s3.s3.eu-north-1.amazonaws.com",
+          ],
+          "media-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "strapi-app-aws-s3.s3.eu-north-1.amazonaws.com",
+          ],
           upgradeInsecureRequests: null,
         },
       },

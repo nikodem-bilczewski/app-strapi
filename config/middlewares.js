@@ -7,20 +7,8 @@ module.exports = [
       contentSecurityPolicy: {
         directives: {
           "connect-src": ["'self'", "https:"],
-          "img-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "dl.airtable.com",
-            "*.amazonaws.com",
-          ],
-          "media-src": [
-            "'self'",
-            "data:",
-            "blob:",
-            "dl.airtable.com",
-            "*.amazonaws.com",
-          ],
+          "img-src": ["'self'", "data:", "blob:", "*.amazonaws.com"],
+          "media-src": ["'self'", "data:", "blob:", "*.amazonaws.com"],
           upgradeInsecureRequests: null,
         },
       },

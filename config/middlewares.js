@@ -6,16 +6,16 @@ module.exports = ({ env }) => [
       contentSecurityPolicy: {
         useDefaults: true,
         directives: {
-          "connect-src": ["self", "https:"],
+          "connect-src": ["'self'", "https:"],
           "img-src": [
-            "self",
+            "'self'",
             "data:",
             "blob:",
             "dl.airtable.com",
             `${env("AWS_BUCKET")}.s3.${env("AWS_REGION")}.amazonaws.com`,
           ],
           "media-src": [
-            "self",
+            "'self'",
             "data:",
             "blob:",
             "dl.airtable.com",

@@ -3,8 +3,8 @@ module.exports = [
   {
     name: "strapi::security",
     config: {
+      useDefaults: true,
       contentSecurityPolicy: {
-        useDefaults: true,
         directives: {
           "connect-src": ["'self'", "https:"],
           "img-src": [
@@ -12,14 +12,14 @@ module.exports = [
             "data:",
             "blob:",
             "dl.airtable.com",
-            "strapi-app-aws-s3.s3.eu-north-1.amazonaws.com",
+            "*.amazonaws.com",
           ],
           "media-src": [
             "'self'",
             "data:",
             "blob:",
             "dl.airtable.com",
-            "strapi-app-aws-s3.s3.eu-north-1.amazonaws.com",
+            "*.amazonaws.com",
           ],
           upgradeInsecureRequests: null,
         },
